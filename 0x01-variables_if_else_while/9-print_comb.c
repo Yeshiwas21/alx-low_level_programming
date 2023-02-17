@@ -11,15 +11,16 @@ int main(void)
 {
 int digit;
 
-for (digit = 0; digit < 10; digit++)
+digit = 0;
+do
 {
 putchar((digit % 10) + '0');
-if (digit == 9)
+digit++;
+if (digit == 10)
 	continue;
 putchar(',');
 putchar(' ');
 }
-putchar(' ');
+while (digit <= 9);
 return (0);
 }
-
