@@ -12,15 +12,13 @@ int main(void)
 int digit;
 
 digit = 0;
-do
-{
+do{
 putchar((digit % 10) + '0');
 digit++;
 if (digit == 10)
 	continue;
 putchar(',');
 putchar(' ');
-}
-while (digit <= 9);
+}while (digit <= 9);
 return (0);
 }
