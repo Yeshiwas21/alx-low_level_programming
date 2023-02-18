@@ -25,7 +25,6 @@ if (digit != 8)
 {
 putchar(',');
 }
-putchar(' ');
 }
 }
 putchar('\n');
