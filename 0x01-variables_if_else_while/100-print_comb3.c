@@ -21,7 +21,7 @@ putchar((num % 10) + '0');
 if (digit != 8)
 {
 putchar(',');
-puchar(' ');
+putchar(' ');
 }
 }
 }
