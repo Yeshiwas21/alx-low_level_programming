@@ -11,12 +11,12 @@ int main(void)
 {
 int digit;
 int num;
-	
+
 for (digit = 0; digit < 10; digit++)
 {
 for (num = digit + 1; num < 10; num++)
 {
-if (digit != num )
+if (digit != num)
 {
 putchar((digit % 10) + '0');
 putchar((num % 10) + '0');
