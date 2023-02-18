@@ -17,9 +17,9 @@ for (digit = 0; digit < 10; digit++)
 {
 for (num = digit + 1; num < 10; num++)
 {
-for (num3 = num +1; num3 < 10; num3++)
+for (num3 = num + 1; num3 < 10; num3++)
 {
-if (digit != num && digit != num3 && num != num3 )
+if (digit != num && digit != num3 && num != num3)
 {
 putchar((digit % 10) + '0');
 putchar((num % 10) + '0');
