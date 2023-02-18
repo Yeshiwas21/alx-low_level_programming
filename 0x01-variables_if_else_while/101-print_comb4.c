@@ -28,6 +28,7 @@ putchar((num3 % 10) + '0');
 if (digit != 7)
 {
 putchar(',');
+putchar(' ');
 }
 }
 }
