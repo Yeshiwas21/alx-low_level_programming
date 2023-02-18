@@ -29,9 +29,9 @@ if (digit != 7)
 {
 putchar(',');
 }
-putchar(' ');
 }
 }
 }
+putchar('\n');
 return (0);
 }
