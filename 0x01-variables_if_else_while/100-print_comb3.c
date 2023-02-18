@@ -10,10 +10,11 @@
 int main(void)
 {
 int digit;
+int num;
 	
 for (digit = 0; digit < 10; digit++)
 {
-for (int num = digit + 1; num < 10; num++)
+for (num = digit + 1; num < 10; num++)
 {
 if (digit != num )
 {
