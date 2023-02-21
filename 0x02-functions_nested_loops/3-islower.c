@@ -14,9 +14,8 @@
 
 int _islower(int c)
 {
-int alphabet;
 
-if (alphabet >= 'a' && alphabet <= 'z')
+if (c >= 'a' && c <= 'z')
 	return (1);
 else
 	return (0);
