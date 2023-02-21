@@ -1,6 +1,6 @@
 /*
  * File: 1-alphabet.c
- * Author: Yeshiwas Dagnaw Alemu
+ * Auth: Yeshiwas Dagnaw Alemu
  */
 
 #include "main.h"
