@@ -1,5 +1,5 @@
 /*
- * File: 7-print_last_digit.c
+ * File: 8-24_hours.c
  * Auth: Yeshiwas Dagnaw Alemu
  */
 
@@ -13,7 +13,7 @@
  * Return: The value of the last digit.
  */
 
-int print_last_digit(int n)
+void jack_bauer(void)
 {
 int last_digit;
 last_digit = n % 10;
