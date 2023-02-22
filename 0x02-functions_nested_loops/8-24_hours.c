@@ -1,4 +1,4 @@
-*
+/**
  * File: 8-24_hours.c
  * Auth: Yeshiwas dagnaw Alemu
  */
