@@ -17,14 +17,14 @@ for (num1 = 0; num1 <= 9; num1++)
 putchar('0');
 for (num2 = 1; num2 <= 9; num2++)
 {
-putchar(',');
-putchar(' ');
+_putchar(',');
+_putchar(' ');
 multi = num1 * num2;
 if (multi <= 9)
-putchar(' ');
+_putchar(' ');
 else
-putchar((multi / 10) + '0');
-putchar((multi % 10) + '0');
+_putchar((multi / 10) + '0');
+_putchar((multi % 10) + '0');
 }
-putchar('\n');
+_putchar('\n');
 }
