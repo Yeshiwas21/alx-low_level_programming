@@ -8,10 +8,12 @@
 
 /**
  * _abs - computes the absulute value of an integer.
+ * @n: The integer to be computed.
  *
+ * Return: The absolute value of the integer.
  */
 
 int _abs(int n)
 {
-return abs(n);
+return (abs(n));
 }
