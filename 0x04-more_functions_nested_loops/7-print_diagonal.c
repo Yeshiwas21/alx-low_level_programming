@@ -9,7 +9,7 @@
  * print_diagonal - draws a diagonal line in the terminal.
  * @n: The number of _ characters to be printed.
  */
-void print_line(int n)
+void print_diagonal(int n)
 {
 int line;
 int space;
