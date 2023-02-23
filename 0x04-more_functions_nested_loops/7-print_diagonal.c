@@ -21,6 +21,8 @@ for (line = 1; line <= n; line++)
 for (space = 1; space <= line; space++)
 	_putchar(' ');
 _putchar('\\');
+if (line == n-1)
+	continue;
 _putchar('\n');
 }
 }
