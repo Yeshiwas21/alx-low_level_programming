@@ -1,1 +1,1 @@
-### This is Readme for c debugging project
+### This is a Readme for C debugging project
