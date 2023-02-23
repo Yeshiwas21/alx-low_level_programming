@@ -15,7 +15,7 @@ int n;
 
 for (n = 0; n <= 9; n++)
 {
-if (n == 2 || n == 4)
+if (n == 2 && n == 4)
 	continue;
 _putchar((n % 10) + '0');
 }
