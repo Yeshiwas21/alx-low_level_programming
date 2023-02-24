@@ -1,7 +1,3 @@
-/* File: 8-print_square.c
- * Auth: Yeshiwas Dagnaw Alemu
- */
-
 #include "main.h"
 
 /**
@@ -12,8 +8,7 @@
   */
 void print_square(int size)
 {
-int h;
-int v;
+int h, v;
 
 if (size > 0)
 {
