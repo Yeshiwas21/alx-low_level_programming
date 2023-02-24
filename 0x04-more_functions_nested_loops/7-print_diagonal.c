@@ -1,8 +1,3 @@
-/*
- * File: 7-print_diagonal.c
- * Auth: Yeshiwas Dagnaw Alemu
- */
-
 #include "main.h"
 
 /**
@@ -13,7 +8,9 @@ void print_diagonal(int n)
 {
 int line, space;
 
-if (n > 0)
+if (n <= 0)
+	_putchar('\n');
+else
 {
 for (line = 0; line < n; line++)
 {
@@ -23,5 +20,4 @@ _putchar('\\');
 _putchar('\n');
 }
 }
-_putchar('\n');
 }
