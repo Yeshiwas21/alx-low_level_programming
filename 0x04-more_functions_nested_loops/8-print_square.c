@@ -14,7 +14,6 @@ void print_square(int size)
 {
 int h;
 int v;
-int n = 10;
 
 if (n > 0)
 {
