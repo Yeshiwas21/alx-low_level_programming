@@ -12,7 +12,7 @@ int i, j, k;
 
 if (size <= 0)
 {
-putchar('\n');
+_putchar('\n');
 }
 else
 {
@@ -20,13 +20,13 @@ for (i = 0; i < size; i++)
 {
 for (j = size - i; j > 1; j--)
 {
-putchar(' ');
+_putchar(' ');
 }
 for (k = 0; k <= i; k++)
 {
-putchar('#');
+_putchar('#');
 }
-putchar('\n');
+_putchar('\n');
 }
 }
 }
