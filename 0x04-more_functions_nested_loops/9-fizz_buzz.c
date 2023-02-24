@@ -1,7 +1,3 @@
-/* File: 9-fizz_buzz.c
- * Auth: Yeshiwas Dagnaw Alemu
- */
-
 #include <stdio.h>
 
 /**
