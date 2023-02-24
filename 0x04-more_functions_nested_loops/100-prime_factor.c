@@ -7,14 +7,16 @@
   */
 int main(void)
 {
-  unsigned long long n = 612852475143;
-  unsigned long long i;
-  for (i = 2ULL; i < n; i++) {
-  	//1ULL is 'unsigned long long
-    while (n % i == 0) {
-      n /= i;
-    }
-  }
-  printf("%llu\n", n);
-  return 0;
+unsigned long long n = 612852475143;
+unsigned long long i;
+
+for (i = 2ULL; i < n; i++)
+{
+while (n % i == 0)
+{
+n /= i;
+}
+}
+printf("%llu\n", n);
+return (0);
 }
