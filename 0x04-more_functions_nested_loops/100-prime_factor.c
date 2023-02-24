@@ -1,4 +1,5 @@
-#include <stdio.h>i
+#include <stdio.h>
+#include <math.h>
 
 /**
   * main - Prints the largest prime factor of the number 612852475143
@@ -7,16 +8,18 @@
   */
 int main(void)
 {
-unsigned long long n = 612852475143;
-unsigned long long i;
+long x, maxFac;
+long num = 612852475143;
+double square = sqrt(num);
 
-for (i = 2ULL; i < n; i++)
+for (x = 1; x <= square; x++)
 {
-while (n % i == 0)
+if (num % x == 0)
 {
-n /= i;
+maxFac = num / x;
 }
 }
-printf("%llu\n", n);
+printf("%ld\n", maxFac);
 return (0);
 }
+
