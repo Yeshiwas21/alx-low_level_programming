@@ -1,6 +1,6 @@
 /*
  * File: 2-strlen.c
- * Auth: Brennan D Baraban
+ * Auth: Yeshiwas Dagnaw Alemu
  */
 
 #include "main.h"
@@ -14,5 +14,5 @@
  */
 size_t _strlen(const char *str)
 {
-return (strlen(*s));
+return (strlen(s));
 }
