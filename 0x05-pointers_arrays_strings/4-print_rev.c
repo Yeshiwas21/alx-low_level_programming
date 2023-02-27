@@ -9,6 +9,6 @@
   */
 void print_rev(char *s)
 {
-return (strrev(str);
+return (strrev(s);
 _putchar('\n');
 }
