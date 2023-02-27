@@ -3,7 +3,7 @@
  * Auth: Yeshiwas Dagnaw Alemu
  */
 
-#include "holberton.h"
+#include "main.h"
 
 /**
  * swap_int - Swaps the values of two integers.
