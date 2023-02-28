@@ -18,7 +18,7 @@ int n;
 while (str[i++])
 	count++;
 if ((count % 2) == 0)
-	n = len / 2;
+	n = count / 2;
 else
 	n = (count + 1) / 2;
 for (i = n; i < count; i++)
