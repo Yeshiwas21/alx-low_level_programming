@@ -16,6 +16,6 @@
  */
 char *_strcpy(char *dest, const char *src)
 {
-strcpy(dest, src);
+dest = strcpy(dest, src);
 return (dest);
 }
