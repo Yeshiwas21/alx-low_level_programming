@@ -11,7 +11,7 @@
  */
 int main()
 {
-int N = 20;
+int N = 84;
 int i = 0;
 int randomizer = 0;
 srand((unsigned int)(time(NULL)));
