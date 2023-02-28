@@ -16,7 +16,7 @@ while (s[i++])
 for (i = count - 1; i >= count / 2; i--)
 {
 tmp = s[i];
-s[i] = s[count- i - 1];
+s[i] = s[count - i - 1];
 s[count - i - 1] = tmp;
 }
 }
