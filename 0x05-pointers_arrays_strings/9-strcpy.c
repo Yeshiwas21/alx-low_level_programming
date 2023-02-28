@@ -5,6 +5,7 @@
 
 #include "main.h"
 #include <string.h>
+#include <stddef.h>
 
 /**
  * _strcpy - Copies a string pointed to by @src, including the
@@ -16,5 +17,6 @@
  */
 char *_strcpy(char *dest, const char *src)
 {
-return (strcpy(dest, src));
+strcpy(dest, src);
+return (dst);
 }
