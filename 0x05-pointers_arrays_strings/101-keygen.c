@@ -14,7 +14,7 @@ int main()
 int N = 84;
 int i = 0;
 int randomizer = 0;
-char numbers[10] = "0123456789";
+char numbers[] = "0123456789";
 char letter[] = "abcdefghijklmnoqprstuvwyzx";
 char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 char symbols[] = "!@#$^&*?";
