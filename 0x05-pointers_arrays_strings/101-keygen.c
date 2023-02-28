@@ -1,4 +1,3 @@
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -9,45 +8,45 @@
  *
  * Return: Always 0.
  */
-int main()
+int main(void)
 {
-int N = 84;
+char passwd[84];
 int i = 0;
-int randomizer = 0;
-char numbers[] = "0123456789";
-char letter[] = "abcdefghijklmnoqprstuvwyzx";
-char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-char symbols[] = "!@#$^&*?";
-char password[84];
-randomizer = rand() % 4;
-srand((unsigned int)(time(NULL)));
+int sum = 0;
+int half1, half2;
+srand(time(0));
 
-for (i = 0; i < N; i++)
+while (sum < 2772)
 {
-if (randomizer == 1)
-{
-password[i] = numbers[rand() % 10];
-randomizer = rand() % 4;
-printf("%c", password[i]);
+passwd[i] = 33 + rand() % 94;
+sum += passwd[i++];
 }
-else if (randomizer == 2)
+passwd[i] = '\0';
+
+if (sum != 2772)
 {
-password[i] = symbols[rand() % 8];
-randomizer = rand() % 4;
-printf("%c", password[i]);
-}
-else if (randomizer == 3)
+half1 = (sum - 2772) / 2;
+half2 = (sum - 2772) / 2;
+if ((sum - 2772) % 2 != 0)
+half1++;
+for (i = 0; passwd[i]; i++)
 {
-password[i] = LETTER[rand() % 26];
-randomizer = rand() % 4;
-printf("%c", password[i]);
-}
-else
+if (passwd[i] >= (33 + half1))
 {
-password[i] = letter[rand() % 26];
-randomizer = rand() % 4;
-printf("%c", password[i]);
+passwd[i] = passwd[i] - half1;
+break;
 }
 }
+for (i = 0; passwd[i]; i++)
+{
+if (passwd[i] >= (33 + half2))
+{
+passwd[i] = passwd[i] - half2;
+break;
+}
+}
+}
+printf("%s", passwd);
 return (0);
 }
+
