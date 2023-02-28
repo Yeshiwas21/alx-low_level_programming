@@ -15,6 +15,9 @@
  */
 int _atoi(char *s)
 {
-atoi(s);
-return (0);
+int res = 0;
+
+for (int i = 0; s[i] != '\0'; ++i)
+	res = res * 10 + s[i] - '0';
+return res;
 }
