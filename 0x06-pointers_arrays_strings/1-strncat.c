@@ -1,6 +1,6 @@
 /*
  * File: 1-strncat.c
- * Auth: Yeshiwas Dagnaw
+ * Auth: Yeshiwas Dagnaw Alemu
  */
 
 #include "holberton.h"
