@@ -1,6 +1,6 @@
 /*
  * File: 0-strcat.c
- * Auth: Yeshiwas Dagnaw
+ * Auth: Yeshiwas Dagnaw Alemu
  */
 
 #include "main.h"
