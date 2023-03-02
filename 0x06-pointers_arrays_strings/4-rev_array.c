@@ -7,7 +7,7 @@
   * @a: An array of integers.
   * @n: The number of elements in the array.
   *
-  * Return: empty
+  * Return: Reversed array
   */
 void reverse_array(int *a, int n)
 {
