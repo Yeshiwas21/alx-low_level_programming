@@ -9,7 +9,7 @@
 /**
   * reverse_array - Reverses the content of an array of integers
   * @a: An array of integers
-  * @n: Number of elements to swap
+  * @n: Number of elements in the array
   *
   * Return: empty
   */
