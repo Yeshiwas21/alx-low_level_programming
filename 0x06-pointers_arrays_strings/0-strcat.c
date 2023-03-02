@@ -5,6 +5,7 @@
 
 #include "main.h"
 #include <string.h>
+#include <stddef.h>
 
 /*
   * _strcat - Concatenates two strings
