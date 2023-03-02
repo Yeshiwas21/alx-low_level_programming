@@ -13,9 +13,9 @@ unsigned int num;
 if (n < 0)
 {
 _putchar('-');
-n = -n;
+n *= -1;
 }
-num = ;
+num = n;
 
 if (num / 10)
 	print_number(num / 10);
