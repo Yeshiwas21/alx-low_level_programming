@@ -18,6 +18,6 @@ if (*s == chs[i] || *s == chs[i] - 32)
 }
 s++;
 }
-return (s);
+return (*s);
 }
 
