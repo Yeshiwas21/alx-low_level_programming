@@ -6,8 +6,7 @@
   *
   * Return: the uppercase character corresponding to the ch
   */
-char *string_toupper(char *)
+char *string_toupper(char *ch)
 {
-char ch;
 return (touuper(ch));
 }
