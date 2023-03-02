@@ -3,8 +3,9 @@
  * Auth: Yeshiwas Dagnaw Alemu
  */
 
-#include "holberton.h"
+#include "main.h"
 #include <string.h>
+#include <stddef.h>
 
 /**
  * _strncat - Concatenates two strings using at most
