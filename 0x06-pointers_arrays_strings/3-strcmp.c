@@ -3,7 +3,9 @@
  * Auth: Yeshiwas Dagnaw Alemu
  */
 
-#include "holberton.h"
+#include "main.h"
+#include <string.h>
+#include <stddef.h>
 
 /**
  * _strcmp - Compares pointers to two strings.
