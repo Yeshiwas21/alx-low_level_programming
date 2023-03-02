@@ -15,7 +15,7 @@ result = a;
 
 for (j = 1; j < n; j++)
 	result++;
-for(i = 0; i < (n / 2); i++)  
+for(i = 0; i < j / 2; i++)  
 {
 temp = a[i];  
 a[i] = *result;  
