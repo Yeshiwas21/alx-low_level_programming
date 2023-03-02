@@ -17,5 +17,4 @@
 char *strcat(char *dest, const char *src)
 {
 strcat(dest, src);
-return (dest);
 }
