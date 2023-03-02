@@ -1,8 +1,3 @@
-/*
- * File: 4-rev_array.c
- * Auth: Yeshiwas Dagnaw Alemu
- */
-
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
