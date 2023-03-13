@@ -9,7 +9,7 @@
   */
 char *_strdup(char *str)
 {
-int a = 0, i = 1;
+int n = 0, i = 1;
 char *s;
 
 if (str == NULL)
@@ -19,11 +19,11 @@ while (str[i])
 s = malloc((sizeof(char) * i) + 1);
 if (s == NULL)
 	return (NULL);
-while (a < i)
+while (n < i)
 {
-s[a] = str[a];
-a++;
+s[n] = str[n];
+n++;
 }
-s[a] = '\0';
+s[n] = '\0';
 return (s);
 }
