@@ -14,23 +14,23 @@ int main(int argc, char *argv[])
 {
 int i;
 unsigned int k, sum = 0;
-char *e;
+char *c;
 
 if (argc > 1)
 {
 for (i = 1; i < argc; i++)
 {
-e = argv[i];
-for (k = 0; k < strlen(e); k++)
+c = argv[i];
+for (k = 0; k < strlen(c); k++)
 {
-if (e[k] < 48 || e[k] > 57)
+if (c[k] < 48 || c[k] > 57)
 {
 printf("Error\n");
 return (1);
 }
 }
-sum += atoi(e);
-e++;
+sum += atoi(c);
+c++;
 }
 printf("%d\n", sum);
 }
