@@ -1,12 +1,13 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 
 /**
   * str_concat - Concatenates two strings of any size
-  * @s1: the first string to concatenate
-  * @s2: the second string to concatenate
+  * @s1: the first string to  be concatenated
+  * @s2: the second string to be concatenated to s1
   *
-  * Return: the two strings concatenated
+  * Return: concatenated string
   */
 char *str_concat(char *s1, char *s2)
 {
