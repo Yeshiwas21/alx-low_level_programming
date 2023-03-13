@@ -3,11 +3,11 @@
 
 /**
  * main - Prints the multiplication of two numbers, followed by a new line.
- * @argc: argument count
- * @argv: argument vector
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
- * Return: Always zero
- *
+ * Return: 0 - If the program receives two arguments.
+ *         1 - If the program does not receive two arguments.
  */
 int main(int argc, char *argv[])
 {
