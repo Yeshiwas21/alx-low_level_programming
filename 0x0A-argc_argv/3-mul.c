@@ -8,16 +8,16 @@
 #include <stdlib.h>
 
 /**
- * main - Prints the multiplication of two numbers, followed by a new line.
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of pointers to the arguments.
+ * main - Prints the result of the multiplication, followed by a new line 
+ * @argc: argument count.
+ * @argv: argument vector.
  *
  * Return: Always 0
  *
  */
 int main(int argc, char *argv[])
 {
-int num1, num2;
+int num1=0, num2=0;
 
 if (argc == 3)
 {
