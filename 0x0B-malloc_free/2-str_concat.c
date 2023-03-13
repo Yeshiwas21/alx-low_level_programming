@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
-  * str_concat - Concatenates two strings of any size
-  * @s1: the first string to  be concatenated
-  * @s2: the second string to be concatenated to s1
+  * str_concat - Concatenates two strings.
+  * @s1: the first string to be concatenated.
+  * @s2: the second string to be concatenated to s1.
   *
   * Return: concatenated string
   */
