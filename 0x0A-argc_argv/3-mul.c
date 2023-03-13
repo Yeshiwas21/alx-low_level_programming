@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * main - Prints the result of the multiplication, followed by a new line 
- * @argc: argument count.
- * @argv: argument vector.
+ * main - Prints the multiplication of two numbers, followed by a new line.
+ * @argc: argument count
+ * @argv: argument vector
  *
  * Return: Always zero
  *
