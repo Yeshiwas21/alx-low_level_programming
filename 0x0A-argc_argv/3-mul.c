@@ -1,3 +1,8 @@
+/*
+ * File: 3-mul.c
+ * Auth: Yeshiwas Dagnaw
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
