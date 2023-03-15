@@ -18,7 +18,7 @@ int h_index, w_index;
 if (width <= 0 || height <= 0)
 	return (NULL);
 
-twoD = malloc(sizeof(int *) * height);
+two_dimensional = malloc(sizeof(int *) * height);
 
 if (two_dimensional == NULL)
 	return (NULL);
