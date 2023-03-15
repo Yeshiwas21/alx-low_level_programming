@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,7 +7,7 @@
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
  *
- * Return: product of two numbers.
+ * Return: Product of two numbers.
  *         1 - If the program does not receive two arguments.
  */
 int main(int argc, char *argv[])
