@@ -19,7 +19,7 @@ if (min > max)
 
 arr = malloc((sizeof(int) * (max - min)) + sizeof(int));
 
-if (a == NULL)
+if (arr == NULL)
 	return (NULL);
 
 while (min <= max)
