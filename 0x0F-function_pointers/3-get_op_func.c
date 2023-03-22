@@ -18,5 +18,3 @@ if (*ops[i].op == *s)
 }
 return (NULL);
 }
-Footer
-© 2023 GitHub, Inc.
