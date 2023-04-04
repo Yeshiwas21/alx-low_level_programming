@@ -14,7 +14,7 @@ while (h)
 {
 num++;
 h = h->next;
- }
+}
 return (num);
 }
 
