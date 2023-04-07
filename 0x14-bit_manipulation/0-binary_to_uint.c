@@ -9,18 +9,27 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int num = 0, mult = 1;
-int len;
-if (b == '\0')
+unsigned int decimal = 0;
+int multiplicador = 1, index = 0;
+
+if (b == NULL)
 	return (0);
-for (len = 0; b[len];)
-	len++;
-for (len -= 1; len >= 0; len--)
+for (index = 0; b[index] != '\0'; index++)
 {
-if (b[len] != '0' && b[len] != '1')
-		return (0);
-num += (b[len] - '0') * mult;
-mult *= 2;
+if (b[index] != '0' && b[index] != '1')
+	return (0);
 }
-return (num);
+for (index = index - 1; index >= 0; index--)
+{
+char currentCharacter;
+currentCharacter = b[index];
+if (currentCharacter == '1')
+{
+decimal += multiplicador;
+}
+multiplicador = multiplicador * 2;
+if (index == 0)
+	break;
+}
+return (decimal);
 }
