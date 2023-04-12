@@ -78,7 +78,7 @@ Username@your-regular-prompt:~$
 **case env and exit**
 ```
 Username@your-regular-prompt:~$ ./hsh
-USER=julien
+USER=root
 LANGUAGE=en_US
 SESSION=ubuntu
 COMPIZ_CONFIG_PROFILE=ubuntu
