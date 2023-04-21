@@ -5,12 +5,12 @@
  * @cmd: Parsed Command
  * @input: User Input
  * @argv:Program Name
- * @counter:Excute Counter
- * Return: Void(Exit Status)
+ * @c:Excute Count
+ * Return: Void (Exit Statue)
  */
-void  exit_bul(char **cmd, char *input, char **argv, int counter)
+void  exit_bul(char **cmd, char *input, char **argv, int c)
 {
-int status, i = 0;
+int statue, i = 0;
 
 if (cmd[1] == NULL)
 {
@@ -36,12 +36,12 @@ exit(statue);
 }
 
 /**
- * change_dir - Change Dirctory
+ * change_dir - Change Dirctorie
  * @cmd: Parsed Command
- * @last_cmd: Statue Last Command Excuted
+ * @er: Statue Last Command Excuted
  * Return: 0 Succes 1 Failed (For Old Pwd Always 0 Case No Old PWD)
  */
-int change_dir(char **cmd, __attribute__((unused))int last_cmd)
+int change_dir(char **cmd, __attribute__((unused))int er)
 {
 int value = -1;
 char cwd[PATH_MAX];
@@ -71,10 +71,10 @@ return (0);
 /**
  * dis_env - Display Enviroment Variable
  * @cmd:Parsed Command
- * @sl:Status of Last command Excuted
+ * @er:Statue of Last command Excuted
  * Return:Always 0
  */
-int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int sl)
+int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int er)
 {
 size_t i;
 int len;
@@ -91,25 +91,25 @@ return (0);
 /**
  * display_help - Displaying Help For Builtin
  * @cmd:Parsed Command
- * @last_cmd: Status Of Last Command Excuted
+ * @er: Statue Of Last Command Excuted
  * Return: 0 Succes -1 Fail
  */
-int display_help(char **cmd, __attribute__((unused))int last_cmd)
+int display_help(char **cmd, __attribute__((unused))int er)
 {
-int file_d, file_write, file_read = 1;
+int fd, fw, rd = 1;
 char c;
 
-file_d = open(cmd[1], O_RDONLY);
-if (file_d < 0)
+fd = open(cmd[1], O_RDONLY);
+if (fd < 0)
 {
 perror("Error");
 return (0);
 }
-while (file_read > 0)
+while (rd > 0)
 {
-file_read = read(fd, &c, 1);
-file_write = write(STDOUT_FILENO, &c, rd);
-if (file_write < 0)
+rd = read(fd, &c, 1);
+fw = write(STDOUT_FILENO, &c, rd);
+if (fw < 0)
 {
 return (-1);
 }
@@ -120,11 +120,11 @@ return (0);
 
 /**
  * echo_bul - Excute Echo Cases
- * @status:Status Of Last Command Excuted
+ * @st:Statue Of Last Command Excuted
  * @cmd: Parsed Command
- * Return: Always 0
+ * Return: Always 0 Or Excute Normal Echo
  */
-int echo_bul(char **cmd, int status)
+int echo_bul(char **cmd, int st)
 {
 char *path;
 unsigned int  pid = getppid();
