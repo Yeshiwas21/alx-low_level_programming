@@ -56,7 +56,7 @@ else if (_strcmp(info->argv[1], "-") == 0)
 {
 if (!_getenv(info, "OLDPWD="))
 {
-_puts(s);
+_puts(str);
 _putchar('\n');
 return (1);
 }
