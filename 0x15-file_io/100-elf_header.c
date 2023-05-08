@@ -151,7 +151,7 @@ else
 void print_abi_version(unsigned char *abi_version)
 {
 printf("  ABI Version:                       %d\n",
-		abi_version[EI_ABIVERSION]);
+	       abi_version[EI_ABIVERSION]);
 }
 
 /**
@@ -162,21 +162,30 @@ printf("  ABI Version:                       %d\n",
 void print_ELF_type(unsigned int elf_type, unsigned char *elf_class)
 {
 if (elf_class[EI_DATA] == ELFDATA2MSB)
-	elf_type >>= 8;
+		elf_type >>= 8;
+
 printf("  Type:                              ");
 
-if (elf_type == ET_NONE)
+switch (elf_type)
+{
+case ET_NONE:
 	printf("NONE (None)\n");
-else if (elf_type == ET_REL)
+	break;
+case ET_REL:
 	printf("REL (Relocatable file)\n");
-else if (elf_type == ET_EXEC)
+	break;
+case ET_EXEC:
 	printf("EXEC (Executable file)\n");
-else if (elf_type == ET_DYN)
+	break;
+case ET_DYN:
 	printf("DYN (Shared object file)\n");
-else if (elf_type == ET_CORE)
+	break;
+case ET_CORE:
 	printf("CORE (Core file)\n");
-else
+	break;
+default:
 	printf("<unknown: %x>\n", elf_type);
+}
 }
 
 /**
