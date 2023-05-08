@@ -8,7 +8,7 @@
  *
  * Return: A pointer to the newly-allocated buffer.
  */
-char *allocate_buffer(char *file)
+char *allocate_buffer(char *filename)
 {
 char *buffer_size;
 buffer_size = malloc(sizeof(char) * 1024);
