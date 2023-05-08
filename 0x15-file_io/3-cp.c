@@ -2,9 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int copy_file(int argc, char *argv[]);
-char *allocate_buffer(char *filename);
-void close_file_descriptor(int file_desc);
 
 /**
  * allocate_buffer - Allocates 1024 bytes for a buffer.
@@ -54,9 +51,9 @@ exit(100);
  *              If file_to cannot be created or written to - exit code 99.
  *              If file_to or file_from cannot be closed - exit code 100.
  */
-int copy_file(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-int current_file, new_file, rd, wr;
+int file_from, file_to, rd, wr;
 char *buffer_size;
 
 if (argc != 3)
@@ -65,32 +62,32 @@ dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
 buffer_size = allocate_buffer(argv[2]);
-current_file = open(argv[1], O_RDONLY);
-rd = read(current_file, buffer_size, 1024);
-new_file = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+file_from = open(argv[1], O_RDONLY);
+rd = read(file_from, buffer_size, 1024);
+file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 do {
-if (current_file == -1 || rd == -1)
+if (file_from == -1 || rd == -1)
 {
 dprintf(STDERR_FILENO,
 "Error: Can't read from file %s\n", argv[1]);
 free(buffer_size);
 exit(98);
 }
-wr = write(new_file, buffer_size, rd);
-if (new_file == -1 || wr == -1)
+wr = write(file_to, buffer_size, rd);
+if (file_to == -1 || wr == -1)
 {
 dprintf(STDERR_FILENO,
 "Error: Can't write to %s\n", argv[2]);
 free(buffer_size);
 exit(99);
 }
-rd = read(current_file, buffer_size, 1024);
-new_file = open(argv[2], O_WRONLY | O_APPEND);
+rd = read(file_from, buffer_size, 1024);
+file_to = open(argv[2], O_WRONLY | O_APPEND);
 } while (rd > 0);
 free(buffer_size);
-close_file_descriptor(current_file);
-close_file_descriptor(new_file);
+close_file_descriptor(file_from);
+close_file_descriptor(file_to);
 return (0);
 }
 
