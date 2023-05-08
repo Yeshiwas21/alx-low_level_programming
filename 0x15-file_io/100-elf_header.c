@@ -11,7 +11,7 @@ void print_magic_num(unsigned char *elf_num);
 void print_ELF_class(unsigned char *elf_class);
 void print_data(unsigned char *elf_class);
 void print_ELF_version(unsigned char *elf_version);
-void print_abi_version(unsigned char *abi_version);
+void print_abi(unsigned char *abi_version);
 void print_ELF_osabi(unsigned char *elf_version);
 void print_ELF_type(unsigned int elf_type, unsigned char *elf_class);
 void print_ELF_entry(unsigned long int elf_entry, unsigned char *elf_class);
@@ -145,10 +145,10 @@ else
 }
 
 /**
- * print_abi_version - Prints the ABI version of an ELF header.
+ * print_abi - Prints the ABI version of an ELF header.
  * @abi_version: A pointer to an array containing the ELF ABI version.
  */
-void print_abi_version(unsigned char *abi_version)
+void print_abi(unsigned char *abi_version)
 {
 printf("  ABI Version:                       %d\n",
 	       abi_version[EI_ABIVERSION]);
@@ -162,8 +162,7 @@ printf("  ABI Version:                       %d\n",
 void print_ELF_type(unsigned int elf_type, unsigned char *elf_class)
 {
 if (elf_class[EI_DATA] == ELFDATA2MSB)
-		elf_type >>= 8;
-
+	elf_type >>= 8;
 printf("  Type:                              ");
 
 switch (elf_type)
@@ -269,7 +268,7 @@ print_ELF_class(header->elf_class);
 print_data(header->elf_class);
 print_ELF_version(header->elf_version);
 print_ELF_osabi(header->elf_version);
-print_abi_version(header->abi_version);
+print_abi(header->abi_version);
 print_ELF_type(header->elf_type, header->elf_class);
 print_ELF_entry(header->elf_entry, header->elf_class);
 free(header);
