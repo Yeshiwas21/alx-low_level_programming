@@ -22,7 +22,7 @@ if (buffer_size == NULL)
 	return (0);
 op = open(filename, O_RDONLY);
 rd = read(op, buffer_size, letters);
-write = write(STDOUT_FILENO, buffer_size, rd);
+wr = write(STDOUT_FILENO, buffer_size, rd);
 if (op == -1 || rd == -1 || wr == -1 || wr != rd)
 {
 free(buffer_size);
