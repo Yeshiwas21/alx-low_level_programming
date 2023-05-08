@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int copy_file(int argc, char *argv[]);
+char *allocate_buffer(char *filename);
+void close_file_descriptor(int file_desc);
+
 /**
  * allocate_buffer - Allocates 1024 bytes for a buffer.
  * @filename: The name of the file buffer is storing chars for.
