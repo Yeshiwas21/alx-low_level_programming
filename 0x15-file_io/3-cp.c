@@ -49,4 +49,4 @@ if (close(file_from) == -1)
 if (close(file_to) == -1)
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
 return (0);
-} 
+}
