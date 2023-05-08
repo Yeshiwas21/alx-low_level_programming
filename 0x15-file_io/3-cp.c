@@ -16,7 +16,7 @@ buffer_size = malloc(sizeof(char) * 1024);
 if (buffer_size == NULL)
 {
 dprintf(STDERR_FILENO,
-"Error: Can't write to %s\n", file);
+"Error: Can't write to %s\n", filename);
 exit(99);
 }
 return (buffer_size);
