@@ -182,17 +182,17 @@ void print_elf_abi(unsigned char *elf_version)
 
 /**
  * print_elf_type - Prints the type of an ELF header.
- * @e_type: The ELF type.
+ * @elf_type: The ELF type.
  * @elf_class: A pointer to an array containing the ELF class.
  */
-void print_elf_type(unsigned int e_type, unsigned char *elf_class)
+void print_elf_type(unsigned int elf_type, unsigned char *elf_class)
 {
 	if (elf_class[EI_DATA] == ELFDATA2MSB)
-		e_type >>= 8;
+		elf_type >>= 8;
 
 	printf("  Type:                              ");
 
-	switch (e_type)
+	switch (elf_type)
 	{
 	case ET_NONE:
 		printf("NONE (None)\n");
@@ -210,7 +210,7 @@ void print_elf_type(unsigned int e_type, unsigned char *elf_class)
 		printf("CORE (Core file)\n");
 		break;
 	default:
-		printf("<unknown: %x>\n", elf_class);
+		printf("<unknown: %s>\n", elf_class);
 	}
 }
 
