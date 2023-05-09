@@ -222,7 +222,7 @@ void print_elf_entry(unsigned long int elf_entry, unsigned char *elf_class)
 {
 	printf("  Entry point address:               ");
 
-	if (e_ident[EI_DATA] == ELFDATA2MSB)
+	if (elf_class[EI_DATA] == ELFDATA2MSB)
 	{
 		elf_entry = ((elf_entry << 8) & 0xFF00FF00) |
 			  ((elf_entry >> 8) & 0xFF00FF);
@@ -244,7 +244,7 @@ void print_elf_entry(unsigned long int elf_entry, unsigned char *elf_class)
  */
 void close_elf_file(int elf_desc)
 {
-	if (close(elf) == -1)
+	if (close(elf_desc) == -1)
 	{
 		dprintf(STDERR_FILENO,
 			"Error: Can't close fd %d\n", elf_desc);
