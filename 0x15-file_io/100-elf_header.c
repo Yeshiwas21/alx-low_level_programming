@@ -102,7 +102,6 @@ void print_elf_data(unsigned char *elf_class)
 		printf("2's complement, big endian\n");
 	else
 		printf("<unknown: %x>\n", elf_class[EI_CLASS]);
-	}
 }
 
 /**
