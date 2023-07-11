@@ -2,31 +2,28 @@
 
 /**
  * hash_table_create - Creates a hash table.
- * @size: Size of the array.
+ * @size: The size of the array.
  *
- * Return: A pointer to the newly created hash table, or NULL if an error occurred.
+ * Return: If an error occurs - NULL.
+ *         Otherwise - a pointer to the new hash table.
  */
-hash_table_t *hash_table_create(unsigned long int size)
-{
-    hash_table_t *new_table = NULL;
+hash_table_t* hash_table_create(unsigned long int size) {
+    hash_table_t* ht;
     unsigned long int i;
 
-    new_table = malloc(sizeof(hash_table_t));
-    if (new_table == NULL)
+    ht = malloc(sizeof(hash_table_t));
+    if (ht == NULL)
         return NULL;
 
-    new_table->size = size;
-    new_table->array = malloc(sizeof(hash_node_t *) * new_table->size);
-    if (new_table->array == NULL)
-    {
-        free(new_table);
+    ht->size = size;
+    ht->array = malloc(sizeof(hash_node_t*) * size);
+    if (ht->array == NULL) {
+        free(ht);  // Clean up allocated memory
         return NULL;
     }
 
-    for (i = 0; i < new_table->size; i++)
-    {
-        new_table->array[i] = NULL;
-    }
+    for (i = 0; i < size; i++)
+        ht->array[i] = NULL;
 
-    return new_table;
+    return ht;
 }
